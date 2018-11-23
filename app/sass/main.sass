@@ -1,0 +1,712 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $color1
+	color: #000
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $black
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.top-line
+	position: fixed
+	width: 100%
+	z-index: 100
+	//background-color: rgba(0,0,0, 0.1)
+	//background-color: $mygreen
+	background-color: $white
+	border-bottom: 1px solid $gray
+	transition: all .2s ease
+	&.onscroll
+		.logo
+			padding-top: 11px
+		.menu
+			padding: 11px 0
+	.logo
+		display: block
+		padding-top: 22px
+		transition: all .2s ease
+		img
+			width: 100px
+	.menu
+		padding: 22px 0
+		text-align: right
+		transition: all .2s ease
+		&.notscroll
+			ul
+				li
+					a
+						color: $white
+		ul, li
+			padding: 0
+			margin: 0
+			list-style-type: none
+		li
+			display: inline-block
+			margin: 0px 5px
+			&.active
+				a
+					color: $red
+			a
+				color: $black
+				font-size: 14px
+				line-height: 15px
+				font-weight: 600
+				transition: all .25s ease
+				position: relative
+				text-decoration: none
+			a:hover
+				color: $red
+				cursor: pointer
+
+.main-head-banner
+	height: 100vh
+
+//.main-menu li:nth-child(2)
+	///a
+		//color: $color3
+
+.hi-text-wrapper
+	position: absolute
+	color: $black
+	top: 52%
+	left: auto
+	max-width: 550px
+	//margin-left: 100px
+	transform: translateY(-50%)
+	h2
+		font-size: 38px
+		font-weight: 300
+		line-height: 1.1
+		i
+			color: $red
+			font-weight: 600
+			font-size: 44px
+			font-style: normal
+		span
+			font-size: 42px
+			font-weight: 600
+			line-height: 1.6
+	.hi-text-description
+		font-size: 14px
+		color: #666
+		padding-top: 20px
+		line-height: 1.5
+
+.sect
+	padding-top: 60px
+	padding-bottom: 60px
+
+
+.text-head
+	//padding-top: 50px
+	line-height: 1.3
+	//padding-bottom: 50px
+	//padding-left: 70px
+	.head
+		font-size: 38px
+		font-weight: 600
+	i
+		color: $red
+		font-weight: 600
+		font-size: 44px
+		font-style: normal
+	.desc
+		font-size: 20px
+		color: #666
+		padding-top: 20px
+		line-height: 1.5
+
+.edge
+	.sect-line
+		//margin-left: 70px
+
+.prem-item
+	padding: 80px 40px
+	cursor: default
+	transition: all .3s ease
+	.prem-item-head
+		font-weight: 600
+		font-size: 30px
+		padding-bottom: 25px
+		i
+			color: $red
+			font-style: normal
+			font-size: 35px
+			line-height: 35px
+	.prem-item-desc
+		color: #666
+		line-height: 1.4
+		height: 88px
+.item-1:hover
+	background-color: $color1
+	cursor: default
+.item-2:hover
+	background-color: $color2
+	cursor: default
+.item-3:hover
+	background-color: $color3
+	cursor: default
+
+
+.sect-line
+	content: ''
+	height: 2px
+	width: 70px
+	background-color: $black
+	margin-top: 40px
+
+
+.news
+	padding-left: 70px
+	padding-right: 70px
+	//margin-bottom: 50px
+	//margin-top: 50px
+	.sect-line
+		margin-top: 70px
+	.text-head
+		padding-left: 0
+		padding-bottom: 40px
+		padding-top: 30px
+
+.right-column
+	background-color: $gray-4
+	padding: 40px 30px
+	position: relative
+	.social-text
+		line-height: 1.4
+		padding-bottom: 25px
+		width: 160px
+	.social-links
+		width: 160px
+	.social-wrapper
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		ul, li
+			padding: 0
+			//margin: 0
+			list-style-type: none
+			position: relative
+			text-align: center
+		li
+			display: inline-block
+			cursor: pointer
+			a
+				color: $black
+				i
+					font-size: 24px
+					padding: 0px 10px
+					line-height: 15px
+					transition: all .25s ease
+					position: relative
+					text-decoration: none
+					&:first-child
+						padding-left: 0
+			&:hover
+				a
+					color: $red
+
+.new-item
+	padding: 20px
+	display: block
+	outline: none
+	text-decoration: none
+	transition: all .2s ease
+	position: relative
+	&:before
+		content: ''
+		background-color: $color1
+		height: 4px
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		z-index: -1
+		transition: all .2s ease
+	&:hover
+		text-decoration: none
+		.new-category
+			background-color: $color2
+		&:before
+			height: 100%
+	.new-head
+		h4
+			font-size: 20px
+			line-height: 1.2
+			color: $black
+	.new-desc-short
+		line-height: 1.4
+		color: #666
+		padding-top: 20px
+		padding-bottom: 25px
+	.new-category
+		text-transform: uppercase
+		font-size: 10px
+		background-color: $color1
+		padding: 3px 15px
+		border-radius: 10em
+		display: inline-block
+		transition: all .2s ease
+		color: $black
+
+
+.more-link
+	text-decoration: none
+	outline: none
+	color: $black
+	font-size: 12px
+	text-transform: uppercase
+	padding: 10px 20px
+	border-bottom: 4px solid darken($color3, 10%)
+	background-color: $color3
+	display: inline-block
+	margin-top: 50px
+	transition: all .2s ease
+	&:hover
+		text-decoration: none
+		outline: none
+		color: $black
+		background-color: $color2
+		border-color: darken($color2, 10%)
+
+.products
+	margin-top: 50px
+	.text-head
+		padding-left: 0
+		margin-bottom: 40px
+
+.product-item
+	background-color: $gray-4
+	transition: all .3s ease
+	display: block
+	text-decoration: none
+	outline: none
+	color: $black 
+	&:hover
+		text-decoration: none
+		color: $black 
+		outline: none
+		background-color: $color1
+		.product-right-column
+			.circle
+				border: 20px solid $white
+		.more-link
+			background-color: $color2
+			border-color: darken($color2, 10%)
+	.product-right-column
+		position: relative
+		img
+			position: relative
+		.circle
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 300px
+			height: 300px
+			border: 0px solid  $color1
+			border-radius: 10em
+			background-color: $color1
+			z-index: 0
+			transition: all .3s ease
+	.product-left-column
+		padding: 80px 0px
+		padding-left: 80px
+		position: relative
+		.product-head
+			h3
+				font-size: 30px
+				line-height: 30px
+				margin: 0
+				padding: 0
+				margin-bottom: 20px
+		.product-desc
+			color: #666
+			line-height: 1.4
+
+.products
+	.form-text
+		margin-bottom: 35px
+		line-height: 1.4
+
+.input-email
+	font-size: 14px
+	line-height: 14px
+	font-weight: bold
+	color: $black
+	padding: 18px 28px
+	box-sizing: border-box
+	width: 100%
+	height: 50px
+	background-color: #fff
+	border-radius: 25px
+	border: none
+	margin-bottom: 35px
+	&::placeholder
+		color: $black
+		transition: all .2s ease
+	&:focus
+		&::placeholder
+			font-size: 11px
+			color: #666
+
+.form-checkbox
+	position: relative
+	display: block
+	padding: 0 0 0 38px
+	margin-bottom: -4px
+	max-width: 300px
+	.input-checkbox
+		position: absolute
+		visibility: hidden
+	span
+		display: block
+		font-size: 12px
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			background-color: $white
+			border-radius: 50%
+			display: block
+			width: 20px
+			height: 20px
+		&:after
+			content: ''
+			position: absolute
+			left: 5px
+			top: 5px
+			background-color: $color1
+			border-radius: 50%
+			display: block
+			width: 10px
+			height: 10px
+
+.form-button
+	margin-top: 35px
+	background-color: $color3
+	color: $black
+	font-size: 12px
+	text-transform: uppercase
+	padding: 10px 20px
+	border: none
+	border-bottom: 4px solid darken($color3, 10%)
+	background-color: $color3
+	&:hover
+		text-decoration: none
+		cursor: pointer
+		outline: none
+		color: $black
+		background-color: $color2
+		border-color: darken($color2, 10%)
+
+.row-background-wrapper, .row-background-wrapper-bio
+	position: relative
+.row-background, .row-background-bio
+	position: relative
+	content: ''
+	background-color: $color1
+	width: 100%
+	height: 0%
+	position: absolute
+	top: 0
+	left: 0
+	transition: all .4s ease-in-out
+	&.active
+		height: 100%
+
+.svg-in-section
+	width: 120px
+	height: auto
+	position: absolute
+	bottom: 40px
+	right: 40px
+
+.contact-item
+	.prem-item-desc
+		height: auto
+	img
+		width: 30px
+		height: auto
+		display: inline-block
+	.contacts-list
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			//display: inline-block
+			//padding-bottom: 15px
+			margin-bottom: 15px
+			&.active
+				a
+					color: $green
+			a
+				color: $black
+				font-size: 18px
+				padding: 20px 12px
+				padding-left: 0
+				line-height: 30px
+				vertical-align: top
+				font-weight: 600
+				transition: all .25s ease
+				position: relative
+				text-decoration: none
+			i
+				font-size: 30px
+				width: 30px
+				margin-right: 15px
+				color: $white
+			a:hover
+				color: $red
+				cursor: pointer
+	.social-links
+		padding: 0
+		margin-left: 10px
+		padding-top: 10px
+		//margin: 0
+		list-style-type: none
+		position: relative
+		display: inline-block
+		//text-align: center
+		li
+			display: inline-block
+			cursor: pointer
+			list-style-type: none
+			a
+				color: $black
+				i
+					font-size: 24px
+					padding: 0px 10px
+					line-height: 15px
+					transition: all .25s ease
+					position: relative
+					text-decoration: none
+					&:first-child
+						padding-left: 0
+			&:hover
+				a
+					color: $red
+
+
+.faq
+	min-height: 100vh
+	.text-head
+		margin-bottom: 40px
+
+.faq-wrapper
+	//background-color: $gray-4
+
+.faq-text
+	font-size: 16px
+	line-height: 1.4
+	margin-bottom: 15px
+	i
+		font-style: normal
+		font-size: 18px
+		color: $red
+		font-weight: bold
+
+
+.topic
+	padding: 20px
+	padding-top: 0px
+	padding-bottom: 0px
+	border-bottom: solid 1px $gray
+	transition: all .2s ease
+	&:hover
+		border-color: $black 
+
+.open
+	cursor: pointer
+	display: block
+	padding: 0px
+
+.expanded
+	background-color: $color3
+	transition: all .2s ease
+	border-color: $black 
+
+.question
+	padding-top: 30px
+	padding-right: 40px
+	padding-bottom: 20px
+	font-size: 18px
+	font-weight: 500
+	color: $black
+	transition: all .2s ease
+	i
+		font-style: normal
+		color: $red
+
+.answer
+	font-size: 16px
+	line-height: 26px
+	display: none
+	margin-bottom: 30px
+	text-align: justify
+	padding-left: 20px
+	padding-right: 20px
+
+.faq-t
+	transform: rotate(-45deg)
+	display: inline-block
+	float: right
+	position: relative
+	top: -55px
+	right: 10px
+	width: 10px
+	height: 10px
+	background: transparent
+	border-left: 2px solid #666
+	border-bottom: 2px solid #666
+	transition: all .2s ease
+
+.faq-o
+	top: -50px
+	transform: rotate(-224deg)
+
+.more-question-wrapper
+	background-color: $gray-4
+	padding: 40px
+	position: relative
+
+.success
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	//display: flex
+	z-index: 10
+	span
+		margin: auto
+	& ~ *
+		transition: all .5s ease
+	&.active
+		& ~ *
+			opacity: .5
+			filter: blur(4px)
+
+.callback
+	position: relative
+	#input-enquiry
+		min-height: 150px
+	input, textarea
+		width: 100%
+		margin: 15px 0
+		outline: none
+		transition: all .2s ease
+		font-size: 14px
+		line-height: 14px
+		font-weight: bold
+		color: $black
+		padding: 18px 28px
+		box-sizing: border-box
+		width: 100%
+		height: 50px
+		background-color: $white
+		border-radius: 25px
+		border: none
+		margin-bottom: 15px
+		&::placeholder
+			transition: all .2s ease
+			color: $black
+		&:focus,&:hover
+			//border-color: $black
+		&:focus
+			&::placeholder
+				font-size: 12px
+				color: $gray-2
+	.but
+		margin-top: 0
+		margin-left: auto
+		margin-right: auto
+
+.footer-text
+	color: #666
+	font-size: 12px
+	padding: 30px 0
+
+.more-link-biorythm
+	margin-top: 0
+
+.gray-back
+	background-color: $gray-4
+
+.owl-carousel
+	padding: 60px 70px
+	padding-bottom: 0
+	.item
+		width: 100%
+		a
+			display: block
+			outline: none
+			text-decoration: none
+			img
+				width: 100%
+				height: auto
+	.owl-nav
+		button.owl-prev, button.owl-next
+			border-radius: 50%
+			width: 60px
+			height: 60px
+			background-color: hsla(0,0%,93%,.6)
+			letter-spacing: 0
+			outline: none
+			text-align: center
+			transition: all .2s ease
+			cursor: pointer
+			i
+				font-size: 30px
+				line-height: 60px
+			&:hover, &:active
+				background-color: $color1
+.owl-next
+	position: absolute
+	top: 50%
+	right: 0px
+	//margin-top: -30px
+	i
+		padding-left: 4px
+.owl-prev
+	position: absolute
+	top: 50%
+	left: 0px
+	//margin-top: -30px
+	i
+		padding-right: 4px
+
+@import "media" // Always at the end
